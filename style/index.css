@@ -1,0 +1,22 @@
+.col {
+  background-color: #75b1ff;
+  border: none;
+  font-size: 30px;
+  text-align: center;
+}
+
+body {
+  background-color: #383c80;
+}
+
+.card-img-custom {
+  max-width: 100%;
+  align-self: center;
+}
+
+.card-home {
+  margin: 20px;
+  background-color: #75b1ff;
+  border-color: white;
+  border-width: 5px;
+}
