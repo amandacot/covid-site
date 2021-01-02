@@ -1,12 +1,12 @@
 .col {
-  background-color: #75b1ff;
+  background-color: white;
   border: none;
   font-size: 30px;
   text-align: center;
 }
 
 body {
-  background-color: #383c80;
+  background-color: white;
 }
 
 .card-img-custom {
@@ -17,6 +17,21 @@ body {
 .card-home {
   margin: 20px;
   background-color: #75b1ff;
-  border-color: white;
+  border-color: #4797FF;
   border-width: 5px;
+}
+
+.card .btn {
+  background-color: #F0BCD4;
+  border: none;
+  color: black;
+  max-width: 70%;
+  margin: 5px;
+  align-self: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.card .btn:hover {
+  background-color: #E89BBF;
 }

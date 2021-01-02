@@ -35,3 +35,49 @@
   -ms-flex-order: 1;
   order: 1;
 }
+
+.navbar {
+  background-color: #383C80;
+}
+
+.jumbotron {
+  min-width: 100%;
+}
+
+/* img {
+  float: right;
+} */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: white;
+  border: 1px solid white;
+  padding: 20px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.grid-item p {
+  text-align: justify;
+}
+
+#bottomText {
+  grid-column: 1/ span 2;
+}
+
+.text-emphasis {
+  font-weight: bold;
+  color: red;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* .backdrop {
+  width: 200px;
+  height: 170px;
+} */
