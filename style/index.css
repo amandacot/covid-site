@@ -1,37 +1,9 @@
-.col {
-  background-color: white;
-  border: none;
-  font-size: 30px;
+.jumbotron {
+  min-height: 80vh;
+  min-width: 100%;
+  display: inline-block;
+}
+
+.welcome-text {
   text-align: center;
-}
-
-body {
-  background-color: white;
-}
-
-.card-img-custom {
-  max-width: 100%;
-  align-self: center;
-}
-
-.card-home {
-  margin: 20px;
-  background-color: #75b1ff;
-  border-color: #4797FF;
-  border-width: 5px;
-}
-
-.card .btn {
-  background-color: #F0BCD4;
-  border: none;
-  color: black;
-  max-width: 70%;
-  margin: 5px;
-  align-self: center;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.card .btn:hover {
-  background-color: #E89BBF;
 }
