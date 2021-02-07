@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="style/global.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
   <title>camera</title>
 </head>
 
@@ -19,7 +21,16 @@
         <a class="nav-link" href="about.html">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Get Started</a>
+        <div class="btn-group">
+          <a class="nav-link btn dropbtn" id="navbarDropdown" href="getStarted.html">Get Started</a>
+          <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="audio.html">Zoom Audio</a>
+            <a class="dropdown-item" href="camera.html">Zoom Camera</a>
+            <a class="dropdown-item" href="joinMeeting.html">Zoom Meetings</a>
+          </div>
       </li>
     </ul>
   </nav>
