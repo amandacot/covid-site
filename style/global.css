@@ -1,9 +1,13 @@
 div p {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: 'Quattrocento', serif;
+  font-family: 'Karla', sans-serif;
+}
+
+.page-title {
+  padding-top: 20px;
 }
 
 .navbar, .dropdown-toggle {

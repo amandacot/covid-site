@@ -1,0 +1,19 @@
+.about-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: white;
+  padding: 5%;
+}
+
+.col {
+  background-color: white;
+  text-align: center;
+}
+
+img {
+  border: 10px solid #E89BBF;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}

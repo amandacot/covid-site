@@ -1,0 +1,45 @@
+.services-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 5%;
+}
+
+.col {
+  background-color: white;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.zoom-btn {
+  background-color: #F0BCD4;
+  border: none;
+  color: black;
+  max-width: 70%;
+  margin: 5px;
+  align-self: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.zoom-btn:hover {
+  background-color: #E89BBF;
+}
+
+.pic-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 5%;
+}
+
+.pic-col {
+  background-color: white;
+  text-align: center;
+  width: 30%;
+  padding: .5%;
+}
