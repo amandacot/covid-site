@@ -1,0 +1,9 @@
+.jumbotron {
+  min-height: 80vh;
+  min-width: 100%;
+  display: inline-block;
+}
+
+.welcome-text {
+  text-align: center;
+}
