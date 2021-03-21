@@ -1,0 +1,12 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.step-num {
+  text-align: left;
+}
+
+img {
+  padding-bottom: 30px;
+}
