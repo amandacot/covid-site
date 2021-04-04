@@ -72,6 +72,21 @@ h1, h2, h3 {
   color: white;
 }
 
+.pink-btn {
+  background-color: #F0BCD4;
+  border: none;
+  color: black;
+  max-width: 70%;
+  margin: 5px;
+  align-self: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.pink-btn:hover {
+  background-color: #E89BBF;
+}
+
 .bd-toc {
   position: sticky;
   top: 4rem;
@@ -133,7 +148,7 @@ h1, h2, h3 {
 }
 
 .grid-item p {
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 #bottomText {
