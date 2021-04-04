@@ -83,24 +83,19 @@
       <main class="col-xl-8 pl-md-5 bd-content">
         <div class="row">
           <!-- insert sub nav here -->
-          <div>
-            <form>
-              <div class="form-row">
-
-
-                <div class="form-group">
-                  <label for="personName">Full Name</label>
-                  <input type="text" class="form-control" id="personName" placeholder="Type Your Name Here" />
-
-                </div>
+          <!-- <div class="form-container">
+            <form id="vaccine-form">
+              <div class="form-group">
+                <label for="personName">Full Name</label>
+                <input type="text" class="form-control" id="personName" required placeholder="Type Your Name Here" />
               </div>
               <div class="form-group">
                 <label for="contactEmail">Email</label>
-                <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email address here" />
+                <input type="email" class="form-control" id="contactEmail" required placeholder="Enter your email address here" />
               </div>
               <div class="form-group">
                 <label for="contactNumber">Phone Number</label>
-                <input type="text" class="form-control" id="contactNumber" placeholder="Enter your phone number here" />
+                <input type="text" class="form-control" id="contactNumber" required placeholder="Enter your phone number here" />
               </div>
               <div class="form-group">
                 <label for="specificQuestions">Specific Questions?</label>
@@ -108,7 +103,7 @@
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-          </div>
+          </div> -->
 
           <div class="grid-container">
             <div class="grid-item">
@@ -125,25 +120,18 @@
             <a href="https://covid19vaccine.health.ny.gov/" target="_blank" class="btn stretched-link pink-btn" role="button">COVID-19 Scheduling for NY State</a>
             <hr class="solid">
           </div>
+
           <div class="grid-item">
             <h3 class="step-num">Step 2:</h3>
-            <p>
-              When you arrive to the website, click the button saying <span class="text-emphasis">Get Started</span></p>
-            <img src="images/getStarted.png">
-            <hr class="solid">
-          </div>
-
-          <div class="grid-item">
-            <h3 class="step-num">Step 3:</h3>
 
             <p>
-              After you click the "Get Started" button, scroll down and click a button saying <span class="text-emphasis">CHECK YOUR ELIGIBILITY</span></p>
+              When you arrive to the website, scroll down and click a button saying <span class="text-emphasis">CHECK YOUR ELIGIBILITY</span></p>
 
             <img src="images/CheckEligibilityBtn.png">
             <hr class="solid">
           </div>
           <div class="grid-item">
-            <h3 class="step-num">Step 4:</h3>
+            <h3 class="step-num">Step 3:</h3>
 
             <p>First, fill out all your personal information. Second, click the button in the bottom left saying <span class="text-emphasis">I consent</span>. Lastly, click the button in the bottom right saying <span
                 class="text-emphasis">submit</span> </p>
@@ -152,18 +140,65 @@
             <hr class="solid">
           </div>
 
+          <div class="grid-item">
+            <h3 class="step-num">Step 4:</h3>
+
+            <p> If you are eligible, you should click the button that says <span class="text-emphasis">Locate Providers.</span> However, if you are not eligible, scroll to the bottom of this page and fill out the form to contact me for more help.</p>
+
+            <img src="images/eligible.png">
+            <hr class="solid">
+          </div>
+
+          <div class="grid-item">
+            <h3 class="step-num">Step 5:</h3>
+
+            <p>You should find a location that says <span class="text-emphasis">Status: Appointments Available.</span> Once you find the location you want, click on <span class="text-emphasis">Schedule your vaccine appointment.</span></p>
+
+            <img src="images/appointment.png">
+            <hr class="solid">
+          </div>
+
+
+        </div>
+
+        <div class="grid-item">
+          <h3 class="step-num">Step 6:</h3>
+
+          <p>Once you click <span class="text-emphasis">Schedule your vaccine appointment,</span> select the box next to <span class="text-emphasis">I'm not a robot.</span> Then, pick a date for your vaccine (My example highlights May 11 as a vaccine
+            date)</p>
+          <img src="images/robot.png">
+          <img src="images/date.png">
+          <hr class="solid">
+        </div>
+        <div class="grid-item">
+          <h3 class="step-num">Step 7:</h3>
+
+          <p>After you select a date, you should agree to signing up for two doses of the vaccine by clicking the button saying <span class="text-emphasis">I Agree</span></p>
+          <img src="images/consentSecondDose.png">
+          <hr class="solid">
+        </div>
+
+        <div class="grid-item">
+          <h3 class="step-num">Step 8:</h3>
+
+          <p> You may have to try multiple times to find an available date, but once you do, you'll click on a time (this example shows 8:15 AM) and then click the button saying <span class="text-emphasis"> Schedule.</span> </p>
+          <img src="images/schedulingTime.png">
+          <hr class="solid">
         </div>
 
 
-
-
-        <div class="row">
-
-          <a href="https://vaccinefinder.org/search/" target="_blank" class="btn stretched-link pink-btn" role="button">Find Locations that Provide Vaccines</a>
-
-        </div>
     </div>
 
+
+
+
+    <div class="row">
+
+      <a href="https://vaccinefinder.org/search/" target="_blank" class="btn stretched-link pink-btn" role="button">Find Locations that Provide Vaccines</a>
+
+    </div>
+  </div>
+  <script src="vaccine.js"></script>
 </body>
 
 </html>
