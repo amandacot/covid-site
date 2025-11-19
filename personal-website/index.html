@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="">
+  <script>
+    // If `prefers-color-scheme` is not supported, fall back to dark mode.
+    // In this case, dark.css will be downloaded with `highest` priority.
+    if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+      document.documentElement.style.display = 'none';
+      document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="assets/css/dark.css" onload="document.documentElement.style.display = \'\'">',
+      );
+    }
+  </script>
+  <!--
+  Conditionally either load the light or the dark stylesheet. The matching file
+  will be downloaded with `highest`, the non-matching file with `lowest`
+  priority. If the browser doesn't support `prefers-color-scheme`, the media
+  query is unknown and the files are downloaded with `lowest` priority (but
+  above I already force `highest` priority for my default light experience).
+-->
+  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="assets/css/light.css" media="(prefers-color-scheme: light)" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/global.css">
+
+  <title>Home | Amanda Cotumaccio</title>
+</head>
+
+<style>
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+  .experience_header{
+    text-align: left !important;
+    font-size: 25px;
+  }
+
+  .xp { padding: 4rem 5%; }
+.xp-timeline { position: relative; margin: 2rem 0; }
+.xp-item { position: relative; display:flex; gap: 1rem; padding-bottom: 1.75rem; }
+.xp-line {
+  position: absolute; left: 10px; top: 20px; bottom: -20px;
+  width: 2px; background: #EAE4FA;
+  z-index: 0;       
+}
+.xp-dot {
+  position: relative; top: 22.5px; left: 2px;
+  min-width: 16px; height:16px; border-radius:50%;
+  background: var(--foreground-accent);
+  box-shadow: 0 0 0 4px #EAE4FA;
+  z-index: 1;    
+}
+.xp-content {
+  margin-left: 2rem;
+  background:#FFFFFF;
+  color: var(--nav-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 1rem 1.1rem;
+  flex: 1;
+  transition: transform .15s ease, box-shadow .2s ease;
+  z-index: 2;       
+}
+.xp-content:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+.xp-content h3 { margin: 0 0 .25rem; }
+.xp-meta { color: rgba(0,0,0,0.65); font-size: 20px; margin-bottom: .5rem; }
+.xp-bullets { margin: .5rem 0 0 1.1rem; }
+.xp-bullets li { margin-bottom: .35rem; }
+
+/* Skill tags */
+.xp-tags { margin-top: .75rem; display:flex; flex-wrap:wrap; gap:.5rem; }
+.xp-tags span{
+  font-size: .8rem;
+  padding: .25rem .5rem;
+  border-radius: 999px;
+  background: #EAE4FA;
+  color: var(--foreground-accent);
+}
+
+  
+</style>
+
+
+
+<body>
+  <script>
+    const theme = localStorage.getItem('theme') || 'dark';
+    document.body.toggleClass('light');
+  </script>
+  <header>
+
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- <a class="navbar-brand" href="#">Amanda Cotumaccio</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Amanda Cotumaccio <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <div class="btn-group">
+              <a class="nav-link btn dropbtn" id="navbarDropdown" href="projects.html">Projects</a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="Amanda Cotumaccio Resume Fall 2025.pdf" target="_blank" rel="noopener">Resume <span class="sr-only">(current)</span></a>
+          </li>
+
+        </ul>
+      </div>
+      </div>
+      <!-- <div class="toggle-night">
+        <div class="moon">
+
+        </div>
+      </div> -->
+
+      <div class="navbar-icons">
+  <a href="mailto:amandalcot@gmail.com" target="_blank" aria-label="Email">
+    <img src="images/emailicon.png" alt="Email" />
+  </a>
+  <a href="https://www.linkedin.com/in/amanda-cotumaccio-709603236/" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <img src="images/linkedinicon.png" alt="LinkedIn" />
+  </a>
+</div>
+      
+    </nav>
+  </header>
+  <div class="container-fluid">
+
+
+
+    <section id="about" class="about-container hero-about">
+  <!-- Left: text -->
+  <div class="about-copy">
+    <h2 style="text-align:left;">About Me</h2>
+    <p class="descriptions">
+  Hi! I’m Amanda Cotumaccio - a Computer Science and Digital Narrative & Interactive Design major at Pitt. 
+  I love blending technology and storytelling to design digital experiences that are intuitive, 
+  accessible, and meaningful. This site highlights projects where I’ve combined creativity and code to craft meaningful digital experiences.
+    </p>
+
+    <div class="cta-row">
+      <a href="projects.html" class="btn-pill">View Projects</a>
+      <a href="Amanda Cotumaccio Resume Fall 2025.pdf" class="btn-pill" target="_blank" rel="noopener">View Resume</a>
+    </div>
+  </div>
+
+  <!-- Right: photo -->
+  <div class="about-photo-wrap">
+    <img src="images/25_08_13 Amanda Cotumaccio_2.jpg" alt="Portrait of Amanda Cotumaccio" class="profile-photo-lg" />
+  </div>
+</section>
+
+
+
+
+    <section id="experience" class="xp">
+  <h2>Professional Experience</h2>
+
+  <div class="xp-timeline">
+    <!-- IMMA -->
+    <div class="xp-item">
+      <div class="xp-dot"></div>
+      <div class="xp-line"></div>
+      <div class="xp-content">
+        <h3 class="experience_header">Irish Museum of Modern Art (IMMA)</h3>
+        <div class="xp-meta">Digital Systems & UX Intern · Summer 2025 · Dublin, IE</div>
+        <ul class="xp-bullets">
+          <li>Created and customized a suite of Shopify templates aligned with IMMA’s branding, seasonal promotions, and accessibility standards, improving navigation and user experience.</li>
+          <li>Conducted in-gallery and on-site evaluation of the Smartify art app to identify accessibility improvements, technical issues, and engagement opportunities.</li>
+          <li>Designed and launched phishing awareness campaigns and developed cybersecurity training content (data protection, password safety, social engineering).</li>
+        </ul>
+        <footer class="xp-tags">
+          <span>Liquid</span><span>CSS</span><span>UX</span><span>Accessibility</span><span>Security</span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- UMG -->
+    <div class="xp-item">
+      <div class="xp-dot"></div>
+      <div class="xp-line"></div>
+      <div class="xp-content">
+        <h3 class="experience_header">Universal Music Group</h3>
+        <div class="xp-meta">Global Technology, D2C Engineering Intern · Summer 2024 · Philadelphia, PA</div>
+        <ul class="xp-bullets">
+          <li>Built Shopify storefront feature sets and integrated various backend eCommerce systems, delivering engaging experiences for fans to purchase merch and music and fulfill orders.</li>
+          <li>Customized themes with HTML, CSS, and JavaScript to align Shopify 2.0 with 1.0 during migration.</li>
+          <li>Incorporated Creative Team feedback from Figma designs and documented template issues for engineers.</li>
+          <li>Developed merch websites for artists including Rich the Kid, Tye Tribbett, Mark Knopfler, The Last Dinner Party, Matt Champion, VCHA, That Mexican OT, and Dermot Kennedy, ensuring optimal user experience.</li>
+        </ul>
+        <footer class="xp-tags">
+          <span>Shopify</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Performance</span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Orbital Engineering -->
+    <div class="xp-item">
+      <div class="xp-dot"></div>
+      <div class="xp-line"></div>
+      <div class="xp-content">
+        <h3 class="experience_header">Orbital Engineering</h3>
+        <div class="xp-meta">Software Developer Intern · Summer 2023 · Pittsburgh, PA</div>
+        <ul class="xp-bullets">
+          <li>Utilized JavaScript, HTML, CSS, AJAX, PHP, and MySQL for web development.</li>
+          <li>Designed new web-based applications for internal & external use, ensuring alignment with digital strategies.</li>
+          <li>Troubleshot and resolved technical issues related to website functionality, performance, and usability.</li>
+        </ul>
+        <footer class="xp-tags">
+          <span>Python</span><span>SQL</span><span>HTML</span><span>Web Development</span>
+        </footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="assets/js/global.js"></script>
+
+</body>
+
+
+
+</html>
