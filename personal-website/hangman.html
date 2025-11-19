@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/hangman.css">
+  <link rel="stylesheet" href="assets/css/individualProjects.css">
+  <title>Projects | Amanda Cotumaccio</title>
+</head>
+
+
+<body onload="addOnLoad()">
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Amanda Cotumaccio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <div class="btn-group">
+              <a class="nav-link btn dropbtn" id="navbarDropdown" href="projects.html">All Projects</a>
+              <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="icecream.html">Ice Cream</a>
+                <a class="dropdown-item" href="#">Hangman</a>
+                <a class="dropdown-item" href="doodlejump.html">Doodle Jump</a>
+                <a class="dropdown-item" href="tetris.html">Tetris</a>
+                <a class="dropdown-item" href="onButton.html">Where Is The On Button?</a>
+              </div>
+          </li>
+
+
+        </ul>
+      </div>
+      </div>
+      <div class="toggle-night">
+        <div class="moon">
+
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <div class="container-fluid">
+
+    <h1 class="page-title">My Own Version of Hangman</h1>
+    <div class="about-container">
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="btn-game-start">
+            <button class="submit" id="choose-btn" onClick="generateChooseForm()">Write your own word</button>
+            <button class="submit" id="cat-btn" onClick="generateCatForm()">Pick a category</button>
+
+          </div>
+          <form name="choose-form" id="choose-form" class="form">
+            <div>
+              <label>Enter your own word</label>
+              <input type="text" placeholder="Write your own word here" name="inputWord" id="inputWord">
+            </div>
+            <div>
+              <button type="button" onClick="setInputWord()" class="submitWord">Submit</button>
+            </div>
+
+          </form>
+          <form name="cat-form" id="cat-form" class="form">
+            <div>
+              <label for="categories">Select a category</label>
+              <select name="categories" id="categories">
+                <option value="movies">Movies</option>
+                <option value="food">Food</option>
+                <option value="coding-languages">Coding languages</option>
+                <option value="singers">Singers</option>
+                <option value="TS-albums">Taylor Swift albums</option>
+                <option value="quotes">Quotes</option>
+                <option value="musicals">Musicals and Theatre</option>
+              </select>
+            </div>
+            <div>
+              <p id="categoryError">
+
+              </p>
+            </div>
+            <div>
+              <button type="button" onClick="checkCategoryPicked();" class="submitWord">Submit</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <div class="row">
+        <div id="col-game" class="col">
+
+          <div>
+
+
+
+            <div class="canvasContainer" id="hangmanContainer">
+              <div class="item1">
+                <button class="btn btn-lg" id="start-btn" onClick="startGamebtn()">Start Game</button>
+              </div>
+              <div class="item4">
+                <canvas id="stickFigure"></canvas>
+              </div>
+              <div class="item2">
+                <p id="gameStatus"></p>
+                <p id="catIs"></p>
+                <p id="puzzle"></p>
+              </div>
+              <div id="hint-container">
+                <button class="btn btn-sm" id="hint-btn" onClick="showHint()">
+                  <img src="images/lightbulb.png" />
+                </button>
+                <p id="hint-string">
+                </p>
+              </div>
+              <div class="row-alphabet">
+                <div id="alphabet">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div id="col-description" class="col">
+          <h3>Hangman!</h3>
+          <p class="descriptions">
+            Everyone knows the game Hangman, so I decided to make my own online version of it! In my version, 
+            players can either create their own word or pick from a list of categories. One of the exciting aspects 
+            I learned was coding a responsive keyboard that interacts with the game interface once initiated. Upon 
+            starting the game, dashed lines appear representing the word players are trying to guess. I learned how to 
+            make the correct letters guesses appear on the corresponding dashed lines. In addition, I learned how to draw 
+            a different shape on the canvas each time a mistake is made. Overall, this project enchanced my coding skills
+            and allowed me to create an interactive Hangman adventure for players to enjoy.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="assets/js/hangman.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="assets/js/global.js"></script>
+
+</body>
+
+</html>

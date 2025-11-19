@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="">
+  <script>
+    // If `prefers-color-scheme` is not supported, fall back to dark mode.
+    // In this case, dark.css will be downloaded with `highest` priority.
+    if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+      document.documentElement.style.display = 'none';
+      document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="assets/css/dark.css" onload="document.documentElement.style.display = \'\'">',
+      );
+    }
+  </script>
+  <!--
+  Conditionally either load the light or the dark stylesheet. The matching file
+  will be downloaded with `highest`, the non-matching file with `lowest`
+  priority. If the browser doesn't support `prefers-color-scheme`, the media
+  query is unknown and the files are downloaded with `lowest` priority (but
+  above I already force `highest` priority for my default light experience).
+-->
+  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="assets/css/light.css" media="(prefers-color-scheme: light)" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/global.css">
+
+  <title>Home | Amanda Cotumaccio</title>
+</head>
+
+<style>
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+  .xp { padding: 4rem 5%; }
+.xp-timeline { position: relative; margin: 2rem 0; }
+.xp-item { position: relative; display:flex; gap: 1rem; padding-bottom: 1.75rem; }
+.xp-line {
+  position: absolute; left: 10px; top: 16px; bottom: -6px;
+  width: 2px; background: #EAE4FA;
+}
+.xp-dot {
+  position: relative; top: 4px; left: 2px;
+  min-width: 16px; height:16px; border-radius:50%;
+  background: var(--foreground-accent);
+  box-shadow: 0 0 0 4px #EAE4FA;
+}
+.xp-content {
+  margin-left: 2rem;
+  background:#FFFFFF;
+  color: var(--nav-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 1rem 1.1rem;
+  flex: 1;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.xp-content:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+.xp-content h3 { margin: 0 0 .25rem; }
+.xp-meta { color: rgba(0,0,0,0.65); font-size: .95rem; margin-bottom: .5rem; }
+.xp-bullets { margin: .5rem 0 0 1.1rem; }
+.xp-bullets li { margin-bottom: .35rem; }
+
+/* Skill tags */
+.xp-tags { margin-top: .75rem; display:flex; flex-wrap:wrap; gap:.5rem; }
+.xp-tags span{
+  font-size: .8rem;
+  padding: .25rem .5rem;
+  border-radius: 999px;
+  background: #EAE4FA;
+  color: var(--foreground-accent);
+}
+
+</style>
+
+
+
+<body>
+  <script>
+    const theme = localStorage.getItem('theme') || 'dark';
+    document.body.toggleClass('light');
+  </script>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Amanda Cotumaccio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <div class="btn-group">
+              <a class="nav-link btn dropbtn" id="navbarDropdown" href="projects.html">All Projects</a>
+              <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="icecream.html">Ice Cream</a>
+                <a class="dropdown-item" href="hangman.html">Hangman</a>
+                <a class="dropdown-item" href="doodlejump.html">Doodle Jump</a>
+                <a class="dropdown-item" href="tetris.html">Tetris</a>
+                <a class="dropdown-item" href="onButton.html">Where Is The On Button?</a>
+              </div>
+          </li>
+
+           <li class="nav-item">
+              <a class="nav-link" href="experience.html">Experience</a>
+             </li>
+
+           <li class="nav-item">
+             <a class="nav-link" href="#">Contact</a>
+             </li>
+
+        </ul>
+      </div>
+      </div>
+      <div class="toggle-night">
+        <div class="moon">
+
+        </div>
+      </div>
+    </nav>
+  </header>
+<section id="experience" class="xp">
+  <h2>Experience</h2>
+
+  <div class="xp-timeline">
+    <!-- IMMA -->
+    <div class="xp-item">
+      <div class="xp-dot"></div>
+      <div class="xp-line"></div>
+      <div class="xp-content">
+        <h3>Irish Museum of Modern Art (IMMA)</h3>
+        <div class="xp-meta">Digital Systems & UX Intern · May – Jul 2025 · Dublin, IE</div>
+        <ul class="xp-bullets">
+          <li>Redesigned and customized Shopify templates using Liquid, CSS, and JavaScript to align with IMMA’s branding and accessibility goals.</li>
+          <li>Evaluated the Smartify art app on-site to improve usability, accessibility, and visitor engagement.</li>
+          <li>Developed cybersecurity awareness materials, including phishing-simulation campaigns and data-protection training.</li>
+        </ul>
+        <footer class="xp-tags">
+          <span>Liquid</span><span>CSS</span><span>JavaScript</span><span>UX Research</span><span>Accessibility</span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- UMG -->
+    <div class="xp-item">
+      <div class="xp-dot"></div>
+      <div class="xp-line"></div>
+      <div class="xp-content">
+        <h3>Universal Music Group</h3>
+        <div class="xp-meta">Global Technology, D2C Engineering Intern · Summer 2024</div>
+        <ul class="xp-bullets">
+          <li>Supported direct-to-consumer artist storefronts by configuring Shopify themes and integrating third-party tools.</li>
+          <li>Debugged and optimized site components to improve performance and accessibility across multiple artist brands.</li>
+          <li>Collaborated with designers and engineers to standardize front-end patterns and automate content updates.</li>
+        </ul>
+        <footer class="xp-tags">
+          <span>Shopify</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Accessibility</span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Orbital Engineering -->
+    <div class="xp-item">
+      <div class="xp-dot"></div>
+      <div class="xp-line"></div>
+      <div class="xp-content">
+        <h3>Orbital Engineering</h3>
+        <div class="xp-meta">Software Developer Intern · Summer 2023 · Pittsburgh, PA</div>
+        <ul class="xp-bullets">
+          <li>Designed and troubleshot internal web-based applications to streamline data-collection and reporting processes.</li>
+          <li>Collaborated with cross-functional teams to align technical solutions with organizational digital strategies.</li>
+          <li>Tested and deployed code enhancements ensuring long-term maintainability and performance.</li>
+        </ul>
+        <footer class="xp-tags">
+          <span>Python</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Web Development</span>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <p class="centered-paragraph" style="margin-top:24px;">
+    <a href="/resume.pdf">Download Résumé</a>
+  </p>
+</section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="assets/js/global.js"></script>
+
+</body>
+
+
+
+</html>
