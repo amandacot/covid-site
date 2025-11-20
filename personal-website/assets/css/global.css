@@ -259,13 +259,13 @@ h1, h2, h3 {
   font-family: inherit;
   margin: 0; }
 
-.navbar {
+/* .navbar {
   display: flex;
   justify-content: space-between;
   
   background-color: var(--nav-background) !important;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-}
+} */
 
 .navbar-brand, .navbar-nav .active > .nav-link {
   color: var(--nav-color) !important; }
@@ -277,28 +277,20 @@ h1, h2, h3 {
 .dropdown:hover .dropbtn {
   display: block; }
 
-.navbar-icons {
+/* .navbar-icons {
 display: flex !important;
-}
+} */
 
 /* icon styles */
-.navbar-icons img {
+/* .navbar-icons img {
   width: 35px;
   height: 35px;
   margin-left:15px;
-}
+} */
 
 /* hover effect */
 .navbar-icons img:hover {
   transition: transform 0.15s ease, background 0.2s ease;
-}
-
-/* adjust on small screens */
-@media (max-width: 768px) {
-  .navbar-icons img {
-    width: 30px;
-    height: 30px;
-  }
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -361,10 +353,40 @@ display: flex !important;
   --nav-color-opaque: rgba(0, 0, 0, 0.9); } */
 
 
+/* Navbar layout (desktop + mobile base) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--nav-background) !important;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  position: relative;   /* 👈 add this */
+}
+
+/* Base icon styles (desktop + mobile) */
+.navbar-icons {
+  display: flex !important;
+  gap: 0.5rem;
+}
+
+.navbar-icons img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Mobile: always stick icons to top-right of navbar */
 @media (max-width: 768px) {
   .navbar-icons {
-    position: fixed;          /* a bit lower from the top edge */
-    right: 1rem;
-    top: 1.5%;
+    position: absolute;
+    top: 0.7rem;     /* tweak this to align vertically with the hamburger */
+    right: 1rem;     /* space from the right edge */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1031;   /* stay above the collapse content if needed */
+  }
+
+  .navbar-icons img {
+    width: 30px;
+    height: 30px;
   }
 }
